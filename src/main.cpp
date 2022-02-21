@@ -1,15 +1,16 @@
 #include <Arduino.h>
 #define LED 5
+#define LED_MASK (1<<5)
 int i = 0;
 
-void ledSetup(){
-  DDRB |=(1<<5); 
+void led_setup(){
+  DDRB |= LED_MASK; 
 }
 
 void setup() {
   Serial.begin(9600);
   //pinMode(LED, OUTPUT);
-  ledSetup();
+  led_setup();
 }
 
 void loop() {
