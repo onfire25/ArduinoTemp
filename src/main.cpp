@@ -1,10 +1,15 @@
 #include <Arduino.h>
-#define LED 13
+#define LED 5
 int i = 0;
+
+void ledSetup(){
+  DDRB |=(1<<5); 
+}
 
 void setup() {
   Serial.begin(9600);
-  pinMode(LED, OUTPUT);
+  //pinMode(LED, OUTPUT);
+  ledSetup();
 }
 
 void loop() {
