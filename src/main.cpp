@@ -7,9 +7,22 @@ void led_setup(){
   DDRB |= LED_MASK; 
 }
 
+void led_on(){
+  PORTB =
+}
+
+void led_off(){
+  PORTB &= ~LED_MASK;
+}
+
+void led_toggle(){
+  PORTB &= ~LED_MASK;
+}
+
 void setup() {
+  led_on();
   Serial.begin(9600);
-  //pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
   led_setup();
 }
 
